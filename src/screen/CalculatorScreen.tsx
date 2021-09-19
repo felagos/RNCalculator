@@ -1,10 +1,18 @@
 import React from 'react'
-import { View } from 'react-native'
+import { Button, Text, View } from 'react-native'
+import { styles } from '../theme/appTheme'
 
 export const CalculatorScreen = () => {
 	return (
-		<View>
+		<View style={styles.calculatorContainer}>
+			<Text style={styles.inlineResult}>15000</Text>
+			<Text style={styles.resultOperation}>15000</Text>
 
+			<View>
+				<View style={styles.button}>
+				<Text style={styles.buttonText}>1</Text>
+				</View>
+			</View>
 		</View>
 	)
 }
