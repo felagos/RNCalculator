@@ -8,11 +8,11 @@ interface IProps {
 	isWidth?: boolean;
 }
 
-export const ButtonNumber = ({ text, color = ColorsEnum.DARK_GRAY, isWidth: width = false }: IProps) => {
+export const ButtonNumber = ({ text, color = ColorsEnum.DARK_GRAY, isWidth = false }: IProps) => {
 	const btnStyles = {
 		...styles.button,
 		backgroundColor: color,
-		width: width ? 180 : 80
+		width: isWidth ? 180 : 80
 	};
 	const textStyles = { ...styles.buttonText, color: color === ColorsEnum.LIGHT_GRAY ? 'black' : 'white' };
 
