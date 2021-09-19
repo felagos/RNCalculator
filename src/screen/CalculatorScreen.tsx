@@ -39,7 +39,7 @@ export const CalculatorScreen = () => {
 			</View>
 
 			<View style={styles.row}>
-				<ButtonNumber text="0" width />
+				<ButtonNumber text="0" isWidth />
 				<ButtonNumber text="." />
 				<ButtonNumber text="+" color={ColorsEnum.ORANGE} />
 			</View>

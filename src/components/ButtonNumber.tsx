@@ -5,10 +5,10 @@ import { ColorsEnum } from '../enums/ColorsEnum';
 interface IProps {
 	text: string;
 	color?: ColorsEnum;
-	width?: boolean;
+	isWidth?: boolean;
 }
 
-export const ButtonNumber = ({ text, color = ColorsEnum.DARK_GRAY, width = false }: IProps) => {
+export const ButtonNumber = ({ text, color = ColorsEnum.DARK_GRAY, isWidth: width = false }: IProps) => {
 	const btnStyles = {
 		...styles.button,
 		backgroundColor: color,
