@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Text, View } from 'react-native'
+import { Text, View } from 'react-native'
 import { styles } from '../theme/appTheme'
 
 export const CalculatorScreen = () => {
@@ -10,7 +10,7 @@ export const CalculatorScreen = () => {
 
 			<View>
 				<View style={styles.button}>
-				<Text style={styles.buttonText}>1</Text>
+					<Text style={styles.buttonText}>1</Text>
 				</View>
 			</View>
 		</View>
