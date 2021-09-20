@@ -13,7 +13,8 @@ export const styles = StyleSheet.create({
 		resultOperation: {
 			color: 'white',
 			fontSize: 60,
-			textAlign: 'right'
+			textAlign: 'right',
+			marginBottom: 10
 		},
 		inlineResult: {
 			color: 'rgba(255, 255, 255, 0.5)',

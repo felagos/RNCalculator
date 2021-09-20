@@ -6,9 +6,10 @@ interface IProps {
 	text: string;
 	color?: ColorsEnum;
 	isWidth?: boolean;
+	action: (value: string) => void;
 }
 
-export const ButtonCalc = ({ text, color = ColorsEnum.DARK_GRAY, isWidth = false }: IProps) => {
+export const ButtonCalc = ({ text, color = ColorsEnum.DARK_GRAY, isWidth = false, action }: IProps) => {
 	const btnStyles = {
 		...styles.button,
 		backgroundColor: color,
@@ -17,7 +18,7 @@ export const ButtonCalc = ({ text, color = ColorsEnum.DARK_GRAY, isWidth = false
 	const textStyles = { ...styles.buttonText, color: color === ColorsEnum.LIGHT_GRAY ? 'black' : 'white' };
 
 	return (
-		<TouchableOpacity>
+		<TouchableOpacity onPress={() => action(text)}>
 			<View style={btnStyles}>
 				<Text style={textStyles}>{text}</Text>
 			</View>
