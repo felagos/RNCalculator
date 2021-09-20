@@ -12,7 +12,20 @@ export const CalculatorScreen = () => {
 	const cleanCalc = () => setNumber('');
 
 	const concatNumber = (valueButton: string) => {
-		setNumber(number + valueButton);
+		if (number.includes('.') && valueButton === '.') return;
+		if (!number.startsWith('0') && !number.startsWith('-0')) return;
+
+		if (valueButton === '.') return setNumber(number + valueButton);
+		if (valueButton === '0' && number.includes('.')) return setNumber(number + valueButton);
+		if (valueButton !== '0' && !number.includes('.')) return setNumber(valueButton);
+		if (valueButton === '0' && !number.includes('.')) return setNumber(number);
+
+		return setNumber(number + valueButton);
+	}
+
+	const postitiveNegative = () => {
+		if (number.includes('-')) setNumber(number.replace('-', ''))
+		else setNumber('-' + number)
 	}
 
 	return (
@@ -22,7 +35,7 @@ export const CalculatorScreen = () => {
 
 			<View style={styles.row}>
 				<ButtonCalc text="C" color={ColorsEnum.LIGHT_GRAY} action={cleanCalc} />
-				<ButtonCalc text="+/-" color={ColorsEnum.LIGHT_GRAY} action={cleanCalc} />
+				<ButtonCalc text="+/-" color={ColorsEnum.LIGHT_GRAY} action={postitiveNegative} />
 				<ButtonCalc text="del" color={ColorsEnum.LIGHT_GRAY} action={cleanCalc} />
 				<ButtonCalc text="/" color={ColorsEnum.ORANGE} action={cleanCalc} />
 			</View>
