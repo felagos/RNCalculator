@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text, View } from 'react-native'
-import { ButtonNumber } from '../components/ButtonNumber'
+import { ButtonCalc } from '../components/ButtonCalc'
 import { ColorsEnum } from '../enums/ColorsEnum'
 import { styles } from '../theme/appTheme'
 
@@ -11,37 +11,37 @@ export const CalculatorScreen = () => {
 			<Text style={styles.resultOperation}>15000</Text>
 
 			<View style={styles.row}>
-				<ButtonNumber text="C" color={ColorsEnum.LIGHT_GRAY} />
-				<ButtonNumber text="+/-" color={ColorsEnum.LIGHT_GRAY} />
-				<ButtonNumber text="del" color={ColorsEnum.LIGHT_GRAY} />
-				<ButtonNumber text="/" color={ColorsEnum.ORANGE} />
+				<ButtonCalc text="C" color={ColorsEnum.LIGHT_GRAY} />
+				<ButtonCalc text="+/-" color={ColorsEnum.LIGHT_GRAY} />
+				<ButtonCalc text="del" color={ColorsEnum.LIGHT_GRAY} />
+				<ButtonCalc text="/" color={ColorsEnum.ORANGE} />
 			</View>
 
 			<View style={styles.row}>
-				<ButtonNumber text="7" />
-				<ButtonNumber text="8" />
-				<ButtonNumber text="9" />
-				<ButtonNumber text="X" color={ColorsEnum.ORANGE} />
+				<ButtonCalc text="7" />
+				<ButtonCalc text="8" />
+				<ButtonCalc text="9" />
+				<ButtonCalc text="X" color={ColorsEnum.ORANGE} />
 			</View>
 
 			<View style={styles.row}>
-				<ButtonNumber text="4" />
-				<ButtonNumber text="5" />
-				<ButtonNumber text="6" />
-				<ButtonNumber text="-" color={ColorsEnum.ORANGE} />
+				<ButtonCalc text="4" />
+				<ButtonCalc text="5" />
+				<ButtonCalc text="6" />
+				<ButtonCalc text="-" color={ColorsEnum.ORANGE} />
 			</View>
 
 			<View style={styles.row}>
-				<ButtonNumber text="1" />
-				<ButtonNumber text="2" />
-				<ButtonNumber text="3" />
-				<ButtonNumber text="+" color={ColorsEnum.ORANGE} />
+				<ButtonCalc text="1" />
+				<ButtonCalc text="2" />
+				<ButtonCalc text="3" />
+				<ButtonCalc text="+" color={ColorsEnum.ORANGE} />
 			</View>
 
 			<View style={styles.row}>
-				<ButtonNumber text="0" isWidth />
-				<ButtonNumber text="." />
-				<ButtonNumber text="+" color={ColorsEnum.ORANGE} />
+				<ButtonCalc text="0" isWidth />
+				<ButtonCalc text="." />
+				<ButtonCalc text="+" color={ColorsEnum.ORANGE} />
 			</View>
 
 		</View>
