@@ -1,6 +1,6 @@
-import React from 'react'
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import { ColorsEnum } from '../enums/ColorsEnum';
+import React from 'react';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {ColorsEnum} from '../enums/ColorsEnum';
 
 interface IProps {
 	text: string;
@@ -9,13 +9,21 @@ interface IProps {
 	action: (value: string) => void;
 }
 
-export const ButtonCalc = ({ text, color = ColorsEnum.DARK_GRAY, isWidth = false, action }: IProps) => {
+export const ButtonCalc = ({
+	text,
+	color = ColorsEnum.DARK_GRAY,
+	isWidth = false,
+	action,
+}: IProps) => {
 	const btnStyles = {
 		...styles.button,
 		backgroundColor: color,
-		width: isWidth ? 180 : 80
+		width: isWidth ? 180 : 80,
 	};
-	const textStyles = { ...styles.buttonText, color: color === ColorsEnum.LIGHT_GRAY ? 'black' : 'white' };
+	const textStyles = {
+		...styles.buttonText,
+		color: color === ColorsEnum.LIGHT_GRAY ? 'black' : 'white',
+	};
 
 	return (
 		<TouchableOpacity onPress={() => action(text)}>
@@ -23,9 +31,8 @@ export const ButtonCalc = ({ text, color = ColorsEnum.DARK_GRAY, isWidth = false
 				<Text style={textStyles}>{text}</Text>
 			</View>
 		</TouchableOpacity>
-	)
-
-}
+	);
+};
 
 const styles = StyleSheet.create({
 	button: {
@@ -33,13 +40,13 @@ const styles = StyleSheet.create({
 		width: 80,
 		borderRadius: 100,
 		justifyContent: 'center',
-		marginHorizontal: 10
+		marginHorizontal: 10,
 	},
 	buttonText: {
 		fontSize: 30,
 		textAlign: 'center',
 		padding: 10,
 		color: 'white',
-		fontWeight: '300'
-	}
+		fontWeight: '300',
+	},
 });
